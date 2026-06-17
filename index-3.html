@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Safe Circle AI - NFTE Demo</title>
+<style>
+body{margin:0;font-family:Arial;background:#f3f4f6}
+.header{background:#4f46e5;color:#fff;padding:14px;text-align:center}
+.phone{max-width:420px;margin:10px auto;background:white;min-height:85vh;border-radius:20px;overflow:hidden;box-shadow:0 0 20px rgba(0,0,0,.15)}
+.screen{display:none;padding:18px 18px 90px}
+.active{display:block}
+.card{background:#fff;border-radius:14px;padding:15px;margin:12px 0;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.score{font-size:42px;font-weight:bold;color:#4f46e5}
+.nav{position:fixed;bottom:0;left:0;right:0;background:white;padding:10px;display:flex;justify-content:space-around;box-shadow:0 -3px 10px rgba(0,0,0,.12)}
+button{border:none;background:#4f46e5;color:white;padding:8px 12px;border-radius:10px}
+.map{height:180px;background:linear-gradient(45deg,#c7d2fe,#e0e7ff);border-radius:12px;display:flex;align-items:center;justify-content:center}
+.plan{border:2px solid #4f46e5}
+h3{margin-top:0}
+</style>
+<script>
+function show(id){
+ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+}
+</script>
+</head>
+<body>
+<div class="header"><h2>Safe Circle AI</h2></div>
+
+<div class="phone">
+
+<div id="home" class="screen active">
+<h2>Parent Dashboard</h2>
+<div class="card">
+<div class="score">96</div>
+AI Safety Score
+</div>
+<div class="card">
+<h3>Teen Status</h3>
+<p>✅ Safe & Active</p>
+<p>Last Check-In: 5 mins ago</p>
+</div>
+<div class="card">
+<h3>Today's Summary</h3>
+<p>No unusual activity detected.</p>
+</div>
+</div>
+
+<div id="map" class="screen">
+<h2>Live Safety Map</h2>
+<div class="map">📍 Interactive Map Demo</div>
+<div class="card">
+Safe Zone: School, Home, Work
+</div>
+<div class="card">
+Current Location Status: Safe
+</div>
+</div>
+
+<div id="alerts" class="screen">
+<h2>Smart Alerts</h2>
+<div class="card">📍 Arrived at destination safely</div>
+<div class="card">🚗 Unexpected route change detected</div>
+<div class="card">⚠️ Late-night activity outside normal routine</div>
+</div>
+
+<div id="sos" class="screen">
+<h2>Emergency SOS</h2>
+<div class="card">
+<h3>One-Tap Emergency Help</h3>
+<p>Notifies parents and trusted contacts instantly.</p>
+<button>SEND SOS</button>
+</div>
+</div>
+
+<div id="teen" class="screen">
+<h2>Teen Experience</h2>
+<div class="card">
+<p>✔ Privacy Protected</p>
+<p>✔ Not Constantly Tracked</p>
+<p>✔ Alerts Only When Necessary</p>
+</div>
+</div>
+
+<div id="pricing" class="screen">
+<h2>Plans</h2>
+<div class="card plan">
+<h3>Starter</h3>
+<h1>$9.99/mo</h1>
+<p>Smart Alerts<br>Dashboard<br>Emergency Notifications</p>
+</div>
+<div class="card plan">
+<h3>Premium</h3>
+<h1>$15.99/mo</h1>
+<p>AI Risk Detection<br>Unlimited Contacts<br>Priority Support<br>Advanced Insights</p>
+</div>
+</div>
+
+</div>
+
+<div class="nav">
+<button onclick="show('home')">Home</button>
+<button onclick="show('map')">Map</button>
+<button onclick="show('alerts')">Alerts</button>
+<button onclick="show('sos')">SOS</button>
+<button onclick="show('teen')">Teen</button>
+<button onclick="show('pricing')">Plans</button>
+</div>
+</body>
+</html>
